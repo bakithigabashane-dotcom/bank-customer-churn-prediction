@@ -2,12 +2,11 @@
 
 ## Project Overview
 
-This project analyzes the factors associated with customers leaving a bank. I used a banking dataset from Kaggle, cleaned and prepared 
-customer records and performed exploratory analysis to understand the main patterns in the data. 
+This project analyzes customer churn in a banking dataset and builds machine learning models to predict which customers are more likely to leave a bank. 
 
-I then trained several classification models to predict whether a customer was likely to churn. 
-The models I developed were Logistic Regression, Decision Tree and Random Forest and they used demographic, financial and account related information. 
-I also used GridSearchCV to tune the Random Forest hyperparameters and compare its performance with the untuned model.
+I cleaned and prepared the customer data and performed exploratory analysis to understand the main patterns between customers who stayed and those who churned. 
+
+I then trained Logistic Regression, Decision Tree and Random Forest classification models using demographic, financial and account-related information. Finally, I used GridSearchCV to tune the Random Forest model and compared its performance with the original models.
 
 The optimized Random Forest achieved an accuracy of 86.55% and a ROC-AUC score of 0.8581.
 
@@ -234,6 +233,17 @@ Although the model achieved high accuracy, its recall shows that it identified l
 
 The optimized Random Forest achieved a ROC-AUC score of 0.8581, suggesting that the model can distinguish between customers who churn and customers who remain with the bank very well.
 However, ROC-AUC should be considered alongside recall and precision because it evaluates discrimination across different classification thresholds, while the classification report reflects performance at the selected threshold.
+
+## Key Findings
+
+The main findings I learnt from the analysis were:
+
+- Approximately 20.37% of customers in the dataset had churned.
+- The target variable was imbalanced, with customers who stayed making up the majority of the dataset.
+- Age was the most important feature in the Random Forest model, followed by estimated salary, credit score, balance and number of products.
+- The optimized Random Forest achieved the highest accuracy at 86.55%.
+- The optimized model achieved a ROC-AUC score of 0.8581, indicating good overall ability to distinguish between customers who churned and those who stayed.
+- Despite its overall performance, the model's 46% recall for churn shows that many customers who actually churned were still missed.
 
 ## Business Recommendations
 
